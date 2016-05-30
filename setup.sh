@@ -2,6 +2,10 @@
 # This enables root to run X server - the linux window system
 xhost local:root
 
+# Generate folder for persistent data
+mkdir -p `pwd`/persistent_data/genymotion/.Genymobile
+chown -R root:root `pwd`/persistent_data/*
+
 # run the container to fail
 docker run -d \
     --privileged \
