@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  genymotion:
+    build:
+      context: ./docker-genymotion
+      dockerfile: Dockerfile
+    container_name: genymotion
+    image: matthewhartstonge/genymotion
+    environment:
+      DISPLAY: unix$DISPLAY
+    privileged: true
+    network_mode: host
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+      - "./persistent_data/genymotion:/root/"
