@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Matthew Hartstonge <matt@mykro.co.nz>
 
 # Specify the binary we want to use
-ENV GENY_VERSION=2.7.0
+ENV GENY_VERSION=2.7.1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
