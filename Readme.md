@@ -53,6 +53,12 @@ docker run -d \
 docker cp dkms:/usr/lib/virtualbox/vboxdrv.sh .
 docker cp dkms:/usr/share/virtualbox /usr/share
 
+# Ensure you have the kernel sources available and built, for example:
+#  zypper in kernel-source kernel-default-devel
+#  ln -s /usr/src/linux-* /usr/src/linux
+#  cd /usr/src/linux
+#  make oldconfig prepare scripts
+
 # Install the DKMS modules on the host
 ./vboxdrv.sh setup
 
